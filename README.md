@@ -4,6 +4,7 @@
 
 Autoindex library is used for Nginx server autoindex module beautification.
 Library only availabled while Nginx Autoindex module enabled.
+![Screen Shoot](demo.png)
 
 ## 2. Quick Start
 
