@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.avatar  {    float: left;
+			display: block;
+			width: 36px;
+			height: 36px;
+			overflow: hidden;
+			margin-right: 10px;}
+
+		.nickname {
+			display: block;
+			font-weight: bold;
+		}
+
+		li[data-role="admin"] .nickname:after {content:"群主"; display:inline-block; border:1px solid gray;}
+		li[data-role="admin"] .nickname {color:red;}
+
+		.date {
+			color:#808080
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li data-role="admin">
+		<span class="avatar">
+		<img src="http://localhost/img/BingImageOfTheDay_20220110.jpg" alt=""></span>
+		<span class="nickname">荣哥</span>
+		<span class="date">2022-2-33</span>
+	</li>
+	<li>
+	<span class="avatar">
+	<img src="http://localhost/img/BingImageOfTheDay_20220110.jpg" alt=""></span>
+		<span class="nickname">荣哥</span>
+		<span class="date">2022-2-33</span>
+	</li>
+</ul>
+</body>
+</html>

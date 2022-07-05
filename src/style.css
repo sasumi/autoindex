@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+:root {
+	--color: #555;
+	--link-color: #0075d9;
+	--back-color: #fff;
+	--font-size: 13px;
+	--menu-shadow:1px 1px 40px #ccc;
+	--input-shadow:1px 1px 4px #ddd;
+	--icon-font:
+	"WebCom-iconfont", serif;
+}
+* {margin:0; padding:0; list-style:none;}
+body {font-size:var(--font-size); line-height:1.5; padding:0; font-family:"Microsoft YaHei",serif; color:var(--color); }
+a {color:var(--color); text-decoration:none;}
+a:hover {color:var(--link-color) !important;}
+.path-list {padding:0.5em; background-color:#ddd; text-shadow:1px 1px 1px white;}
+.path-list a {font-weight:normal}
+.path-list a:after {content:" > "; color:var(--color)}
+.path-list a:last-child:after {content:"";}
+.path-list a:first-child:before {content:"Home";}
+
+.status-bar {display:block; width:100%; position:fixed; bottom:0;padding:0.2em 1em;background: #eee6;box-shadow: 1px 1px 10px #c3c3c3;text-shadow: 1px 1px 1px white;}
+
+.WebCom-dialog-btn{display:inline-block;padding:0.5em 1.8em;border:none;background-color:#4c87d9;color:#ffffff;}
+.WebCom-dialog-btn:hover {background-color:#519aff;}
+.WebCom-dialog-input {border:1px solid #ccc; padding:0.5em; font-size:var(--font-size)}
+.WebCom-dialog-input:focus {outline:1px solid #519aff}
+
+.menu {padding:0.5em 0; background-color:var(--back-color); min-width:200px; box-shadow:var(--menu-shadow); border-radius:3px;}
+.menu .menu-item {padding: 0.5em 1em 0.5em 1.6em; white-space:nowrap; cursor:pointer; display:block; background-color:var(--back-color); transition:all 0.1s linear}
+.menu .menu-item:hover {background-color: #eeeeee78; text-shadow:1px 1px 1px #fff;}
+.menu .menu-sep {font-size:0; margin:0 auto; width:calc(90% - 2em); border-top:1px solid #ddd; border-bottom:1px solid #fff; display:block;}
+.menu-item-checked:before {content:"\e624";font-size: 1.1em; position:absolute;margin: 0 0 0 -1.1em;font-family: var(--icon-font);}
+
+.options {padding:0.5em; box-shadow:1px 1px 5px #ddd;}
+.options>* {vertical-align:middle;}
+.options label {color:gray;}
+.options label ~ label {margin-left:1em;}
+
+.toggle-switcher {display:inline-block;vertical-align:middle;}
+.toggle-switcher>span {display:inline-block; float:left;padding: 0 .35em; box-sizing:border-box; cursor:pointer; text-shadow:1px 1px 1px white;}
+.toggle-switcher>span.active {background-color:#fff; cursor:default;box-shadow: var(--input-shadow);border: 1px solid #ccc;color:var(--color)}
+.toggle-switcher [data-mode="list"],
+.toggle-switcher [data-mode="thumb"]{font-family:var(--icon-font);font-size: 16px;border: 1px solid transparent;}
+.toggle-switcher [data-mode="list"]:before {content:"\e62c"}
+.toggle-switcher [data-mode="thumb"]:before {content:"\e618";}
+
+.context {position:absolute; }
+
+.dropdown {display:inline-block; position:relative;}
+.dropdown>dt {border:1px solid #ccc;padding: 0.15em 0.5em; box-shadow:var(--input-shadow); cursor:default;}
+.dropdown>dt:after {content:"\e65e"; font-family:var(--icon-font);font-size: 12px;margin-left: 0.5em;}
+.dropdown>dd {display:none; position:absolute;}
+.dropdown-left>dd {right:0;}
+.dropdown:hover>dd {display:block;}
+
+#setting-menu {float:right;}
+
+.setting-entry:before {font-family:var(--icon-font); content:"\e9cb"}
+
+#file-list i {}
+#file-list i img {width:100%; height:100%; object-fit:contain;}
+li[data-extension="png"] i,
+li[data-extension="jpg"] i,
+li[data-extension="jpeg"] i,
+li[data-extension="bmp"] i,
+li[data-extension="gif"] i,
+li[data-extension="webp"] i{box-shadow:1px 1px 3px #ccc}
+
+.mode-list {padding:1em; box-sizing:border-box;height: calc(100vh - 97px); overflow:auto;}
+.mode-list li {padding:0.25em 0.5em;}
+.mode-list li:nth-child(even){background-color:#dfdfdf54;}
+.mode-list .name {display:inline-block; min-width:40em;}
+.mode-list .created-at {color:gray; display:inline-block; min-width:20em;}
+.mode-list .size {color:gray; display:inline-block; }
+.mode-list i {width:20px; height:20px;  display:inline-block; vertical-align:middle}
+
+.mode-thumb {--thumb-size:50px; padding:1em; box-sizing:border-box;height: calc(100vh - 98px); overflow:auto;}
+.mode-thumb li {float:left; width:var(--thumb-size); padding:0 5px;margin:0 10px 10px 0;}
+.mode-thumb .name {font-size: 12px; display:block; text-align:center; height:56px; overflow:hidden; word-break:break-all}
+.mode-thumb i {content:""; display:block; width:var(--thumb-size); height:var(--thumb-size); margin:0 auto; }
+.mode-thumb .created-at,.mode-thumb .size {display:none;}

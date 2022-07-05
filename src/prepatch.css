@@ -1,0 +1,4 @@
+@charset "UTF-8";
+body>h1,
+body>hr,
+body>pre {display:none;}
